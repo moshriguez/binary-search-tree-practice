@@ -31,4 +31,22 @@ class Node {
         }
         return false
     }
+
+}
+function inOrder(node) {
+    node.left && inOrder(node.left)
+    console.log(node.value)
+    node.right && inOrder(node.right)
+}
+
+function preOrder(node) {
+    console.log(node.value)
+    node.left && preOrder(node.left)
+    node.right && preOrder(node.right)
+}
+
+function postOrder(node) {
+    node.left && preOrder(node.left)
+    node.right && preOrder(node.right)
+    console.log(node.value)
 }
